@@ -1,38 +1,40 @@
 header {
-    text-align: center;
-    margin: 50px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
-    font-size: 2rem;
-    letter-spacing:1rem;
-    }
-
-.image {
-    height: 80%;
-    width: 100%;
-    display: flex;
-    margin: 5% auto 0;
-    box-sizing: border-box;
+    text-align: center; /* Centers the text horizontally within the header */
+    margin: 50px;     /* Adds a 50-pixel margin around the entire header, creating space outside of it */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;     /*  */
+    font-size: 2rem;    /* Sets the font size to 2 rem units, which is based on the root font size (often 16px by default) */
+    letter-spacing:1rem;    /* Adds a large amount of space between each letter in the header tex */
     }
 
 .image_box {
-    margin: 0;
-    flex-grow: 1;
-    flex-basis: 0;
-    transition: 0.5s;
+    height: 100%;    /* Sets the height of the image box to 100% of its containing element. */
+    width: 100%;    /* The image box takes up the full width of its container. */
+    display: flex;    /* Enables flexbox layout for the image box, making it easier to align and size the images within it. */
+    margin: auto 0;    /* Vertically centers the image box within its container. */
+    box-sizing: border-box;    /* Ensures that padding and border widths are included in the total width and height, so the size of the element is easier to manage */
     }
 
-.image_box img {
-    height: 75vh;
-    width: 100%;
-    object-fit: cover;
-    transition: 0.5s;
+    /* flex-basis to 0 and flex-grow to 1. This means:
+    Each image starts at a width of 0.
+        Theywill equally share the available space in the container when the container expands or shrinks. */        
+.image {
+    margin: 0;    /* Removes any default margin around the image */
+    flex-grow: 1;    /* Allows the image to grow and fill available space within the .image_box containe */
+    flex-basis: 0;    /* flex item will have no base size initially. It starts with a width or height of zero (depending on the flex direction). */
+    transition: 2s;    /* Adds a smooth transition effect over 0.5 seconds when the size of the image changes */
     }
 
-.image_box:hover {
-    flex-basis: 50%;
+.image img { /* refers to any <img> element that is inside an element with the class image */
+    height: 75vh;    /* Sets the image height to 75% of the viewport heigh */
+    width: 100%;    /* Makes the image as wide as its container */
+    object-fit: cover;    /* Ensures the image covers its container, cropping parts of the image if necessary, without stretching */
+    }
+
+.image:hover {
+    flex-basis: 75%;    /* When the user hovers over an image, it grows to 75% of the available space, creating a zoom-in effect */
     }
 
 footer {
-    text-align: center;
-    letter-spacing: 0.2rem;
+    text-align: center;    
+    letter-spacing: 0.2rem;    
     }
