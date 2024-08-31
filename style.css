@@ -1,5 +1,5 @@
 body {
-    color: #5887a3;
+    color: #44697e;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
     padding: 0;
@@ -46,5 +46,6 @@ header {
 footer {
     text-align: center;    
     margin: 0 auto;
-    letter-spacing: 0.2rem;    
+    letter-spacing: 0.2rem;
+    font-size: 0.75rem; 
     }
